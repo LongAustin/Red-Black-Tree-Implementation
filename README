@@ -1,0 +1,63 @@
+rbtree.py is a Python implementation of a Red-Black-Tree. The file takes a single command-line arguement, which wil be a file name.
+The input file will contain the insturctions for the structure. The first line will be an integer 0 < N < 10^6 which will give the 
+number of instructions. There will then be N lines, each containing an instruction. The possible instructions are:
+
+insert K, where K is an integer. Key K is inserted into the tree. There is no output
+
+remove K, where K is an integer. Key K is removed from the tree. If no such node exists, "TreeError" is returned
+
+search K, where K is an integer. The tree is searched, if key K is found, "Found" is returned, else "NotFound" is returned
+
+max, where the largest value in the tree is returned. If the tree is empty, "Empty" is returned
+
+min, where the smallest value in the tree is returned. If the tree is empty, "Empty" is returned
+
+inprint, prints the keys of the tree according to an in-order traversal. If the tree is empty, "Empty" is returned
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Sample Input:
+18
+inprint
+remove 2
+max
+search 5
+insert 1
+insert 2
+search 1
+search 2
+insert 3
+inprint
+insert 10
+insert 5
+inprint
+search 5
+remove 2
+inprint
+max
+min
+
+Sample output:
+Empty
+TreeError
+Empty
+NotFound
+Found
+Found
+1 2 3
+1 2 3 5 10
+Found
+1 3 5 10
+10
+1
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+Note: there are additional test cases included in the repository for larger tests of the data structure
